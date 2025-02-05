@@ -1,0 +1,27 @@
+/* background-color */
+/* background-image */
+/* background-repeat */
+/* background-position */
+/* background-attachment */
+
+/* BACKGROUND-SHORT-HAND */
+
+/* CSS Filters */
+
+* {
+  margin: 0;
+}
+
+div {
+  height: 500px;
+  width: 500px;
+
+  background-color: aqua;
+  background-image: url("assets/v2osk-1Z2niiBPg5A-unsplash.jpg");
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+
+  filter: blur(5px);
+}

@@ -1,0 +1,16 @@
+.block {
+  border: 2px dashed crimson;
+  display: inline;
+}
+
+span {
+  border: 2px dashed blue;
+  display: inline-block;
+  height: 50px;
+}
+
+a {
+  display: inline-block;
+  width: 100px;
+  background: teal;
+}
