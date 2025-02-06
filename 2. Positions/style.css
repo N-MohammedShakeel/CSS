@@ -1,0 +1,30 @@
+*,
+html {
+  margin: 0;
+}
+
+.container {
+  height: 500px;
+  background: rgb(46, 170, 155);
+  position: relative;
+}
+
+.container > div {
+  width: 100px;
+  height: 100px;
+}
+
+.one {
+  background-color: darkgreen;
+  position: relative;
+}
+.two {
+  background-color: darkmagenta;
+  left: 50%;
+}
+.three {
+  background-color: darksalmon;
+}
+.four {
+  background-color: deeppink;
+}
