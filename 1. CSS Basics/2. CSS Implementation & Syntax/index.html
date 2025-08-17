@@ -2,23 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Implementing CSS</title>
-    <!-- Internal CSS -->
+    <title>Types of CSS Example</title>
+
+    <!-- 1. Internal CSS -->
     <style>
-      /* selector {property: value} */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+      }
+
       h2 {
-        color: coral;
+        color: #2e8b57;
+        text-align: center;
+      }
+
+      p.internal {
+        color: #ff4500;
+        font-weight: bold;
       }
     </style>
+
+    <!-- 2. External CSS -->
+    <!-- Assume external.css exists in the same folder -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
+    <h2>Types of CSS Example</h2>
+
     <!-- Inline CSS -->
-    <h1 style="color: red">Inline CSS</h1>
-    <h2>Internal CSS</h2>
-    <h3>External CSS</h3>
+    <p style="color: blue; font-size: 18px">
+      This paragraph uses <strong>inline CSS</strong>.
+    </p>
+
+    <!-- Internal CSS -->
+    <p class="internal">This paragraph uses <strong>internal CSS</strong>.</p>
+
+    <!-- External CSS -->
+    <p class="external">This paragraph uses <strong>external CSS</strong>.</p>
   </body>
 </html>

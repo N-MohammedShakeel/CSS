@@ -1,20 +1,67 @@
-/* Link */
-.link:link {
-  color: seagreen;
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
-/* Visited */
-.visited:visited {
-  color: tomato;
+/* =======================
+   Pseudo-classes
+   ======================= */
+
+/* Hover pseudo-class */
+a.link:hover {
+  color: #e74c3c; /* changes text color on hover */
+  text-decoration: underline;
 }
 
-/* Hover  */
-.hover:hover {
-  color: violet;
-  font-size: 3rem;
+/* First-child pseudo-class */
+ul li:first-child {
+  color: #2980b9; /* targets first <li> in <ul> */
+  font-weight: bold;
 }
 
-/* Active  */
-.active:active {
-  color: yellow;
+/* Last-child pseudo-class */
+ul li:last-child {
+  color: #27ae60; /* targets last <li> in <ul> */
+  font-style: italic;
+}
+
+/* Nth-child pseudo-class */
+ul li:nth-child(2) {
+  color: #8e44ad; /* targets 2nd <li> */
+}
+ul li:nth-child(3) {
+  color: #f39c12; /* targets 3rd <li> */
+}
+
+/* Focus pseudo-class */
+input:focus {
+  border: 2px solid #3498db; /* highlights input when focused */
+  outline: none;
+}
+
+/* Checked pseudo-class */
+input:checked + label {
+  color: #e67e22; /* styles label when checkbox is checked */
+  font-weight: bold;
+}
+
+/* =======================
+   Pseudo-elements
+   ======================= */
+
+/* ::before pseudo-element */
+p.before::before {
+  content: "🔥 "; /* inserts content before paragraph text */
+}
+
+/* ::after pseudo-element */
+p.after::after {
+  content: " ✨"; /* inserts content after paragraph text */
+}
+
+/* Styling pseudo-elements */
+p.before,
+p.after {
+  font-size: 18px;
+  margin: 10px 0;
 }

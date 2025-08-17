@@ -37,18 +37,26 @@ footer {
 /* 3 */
 nav {
   margin-top: 5rem;
-  background: purple;
+  background: grey;
   display: flex;
   /* Don't worry about this code */
   justify-content: space-between;
 }
 
+.logo-container {
+  margin-left: 10px;
+}
+
 nav ul {
+  display: flex;
+  width: 250px;
   border: 2px solid red;
+  padding: 0px;
+  justify-content: space-around;
+  margin-right: 10px;
 }
 
 ul li {
-  display: inline;
   list-style: none;
 }
 

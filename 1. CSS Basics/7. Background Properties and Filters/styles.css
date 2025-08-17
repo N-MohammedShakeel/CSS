@@ -1,27 +1,82 @@
-/* background-color */
-/* background-image */
-/* background-repeat */
-/* background-position */
-/* background-attachment */
-
-/* BACKGROUND-SHORT-HAND */
-
-/* CSS Filters */
-
-* {
-  margin: 0;
+body {
+  font-family: Arial, sans-serif;
 }
 
+/* Common styling for all divs */
 div {
-  height: 500px;
-  width: 500px;
+  height: 150px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
 
-  background-color: aqua;
-  background-image: url("assets/v2osk-1Z2niiBPg5A-unsplash.jpg");
-  background-repeat: repeat-y;
-  background-size: contain;
+/* Background color */
+.bg-color {
+  background-image: url("./assets/image.jpg");
+  background-size: cover;
+}
+
+/* Background image */
+.bg-image {
+  background-image: url("./assets//image.jpg");
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+}
 
+/* Background size and position */
+.bg-size-position {
+  background-image: url("./assets//image.jpg");
+  background-size: contain; /* Scales to fit inside div */
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: #f39c12; /* fallback */
+}
+
+/* Background repeat */
+.bg-repeat {
+  background-image: url("./assets/image.jpg");
+  background-size: cover;
+  background-repeat: repeat; /* repeats in both directions */
+  background-color: #ba3737; /* fallback */
+}
+
+/* Background attachment */
+.bg-attachment {
+  background-image: url("./assets//image.jpg");
+  background-attachment: fixed; /* stays fixed while scrolling */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Filter: blur */
+.filter-blur {
+  background-image: url("./assets/image.jpg");
+  background-size: cover;
   filter: blur(5px);
+}
+
+/* Filter: brightness */
+.filter-brightness {
+  background-image: url("./assets/image.jpg");
+  background-size: cover;
+  filter: brightness(150%);
+}
+
+/* Filter: grayscale */
+.filter-grayscale {
+  background-image: url("./assets/image.jpg");
+  background-size: cover;
+  filter: grayscale(80%);
+}
+
+/* Filter: contrast */
+.filter-contrast {
+  background-image: url("./assets/image.jpg");
+  background-size: cover;
+  filter: contrast(200%);
 }

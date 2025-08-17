@@ -22,8 +22,7 @@ body {
   /* Flexbox Code Goes Here */
   display: flex;
   flex-flow: row nowrap; /* default */
-  flex-flow: column wrap;
-  flex-flow: column-reverse wrap-reverse;
+  flex-flow: column-reverse nowrap;
 }
 
 .container div {

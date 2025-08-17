@@ -2,15 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psudo Classes</title>
+    <title>CSS Pseudo Selectors Example</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="link" href="https://www.nycgo.com">NYC.com</a>
-    <a class="visited" href="https://www.wikipedia.com">Wikipedia</a>
-    <a class="hover" href="https://www.twitch.tv">Twitch</a>
-    <a class="active" href="https://www.udemy.com">Udemy</a>
+    <h2>CSS Pseudo Selectors</h2>
+
+    <!-- Pseudo-classes -->
+    <a href="#" class="link">Hover over me (pseudo-class :hover)</a>
+    <ul>
+      <li class="first">First Item (:first-child)</li>
+      <li>Second Item (:nth-child(2))</li>
+      <li>Third Item (:nth-child(3))</li>
+      <li class="last">Last Item (:last-child)</li>
+    </ul>
+
+    <!-- Pseudo-elements -->
+    <p class="before">This paragraph uses ::before pseudo-element.</p>
+    <p class="after">This paragraph uses ::after pseudo-element.</p>
+
+    <!-- Other pseudo-classes -->
+    <input type="text" placeholder="Focus on me (:focus)" />
+    <input type="checkbox" id="check" />
+    <label for="check">Check me (:checked)</label>
   </body>
 </html>

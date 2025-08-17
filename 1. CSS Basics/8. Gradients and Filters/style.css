@@ -1,13 +1,47 @@
-/* https://www.grabient.com/ */
-/* https://webgradients.com/ */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
 
 div {
-  width: 300px;
-  height: 300px;
-  /*  ************** LINEAR GRADIENT  ************** */
-  background-image: linear-gradient(to left, purple, yellow);
-  /* background-image: linear-gradient(to right, purple, yellow); */
+  width: 400px;
+  height: 150px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
+}
 
-  /*  ************** RADIAL GRADIENT ************** */
-  /* background-image: radial-gradient(circle, yellow, green); */
+/* Linear Gradient */
+.linear-gradient {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+/* Radial Gradient */
+.radial-gradient {
+  background: radial-gradient(circle, #6a11cb, #2575fc);
+}
+
+/* Gradient with Blur Filter */
+.gradient-blur {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  filter: blur(4px);
+}
+
+/* Gradient with Brightness Filter */
+.gradient-brightness {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  filter: brightness(150%);
+}
+
+/* Gradient with Grayscale Filter */
+.gradient-grayscale {
+  background: radial-gradient(circle, #f7971e, #ffd200);
+  filter: grayscale(80%);
 }

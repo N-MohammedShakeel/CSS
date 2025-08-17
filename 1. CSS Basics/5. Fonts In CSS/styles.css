@@ -1,35 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Oi&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&familyOi&display=swap");
-
-/* font-family */
-/* font-size */
-/* font-weight */
-/* text-transform */
-/* line-height */
-/* letter-spacing */
-/* word-spacing */
-/* text-align */
-/* text-decoration */
-
-h1 {
-  /* font-family: monospace; */
-  font-weight: normal;
-  /* letter-spacing: 20px; */
-  word-spacing: 5px;
-  text-align: center;
-  /* font-family: "Oi", cursive; */
-  font-family: "Dancing Script", cursive;
+body {
+  font-family: Arial, sans-serif;
 }
 
-p {
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: capitalize;
-  line-height: 50px;
-  word-spacing: 10px;
+/* Google Font: Roboto */
+.google-font1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 10px 0;
 }
 
-a {
-  text-decoration: none;
+/* Google Font: Lobster */
+.google-font2 {
+  font-family: "Lobster", cursive;
+  font-size: 22px;
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+/* Font weight */
+.font-weight {
+  font-weight: bold;
+  font-size: 18px;
+  color: #27ae60;
+  margin: 10px 0;
+}
+
+/* Font style */
+.font-style {
+  font-style: italic;
+  font-size: 18px;
+  color: #2980b9;
+  margin: 10px 0;
+}
+
+/* Text decoration */
+.text-decoration {
+  text-decoration: underline;
+  font-size: 18px;
+  color: #8e44ad;
+  margin: 10px 0;
 }

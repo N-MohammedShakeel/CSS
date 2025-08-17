@@ -27,8 +27,6 @@ body {
 
 .third {
   align-self: stretch; /* Default */
-  align-self: flex-start;
-  align-self: flex-end;
   align-self: center;
 }
 

@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  font-size: 18px;
+}
+
+/* Spacing between icons and text */
+i {
+  margin-right: 10px;
+}
+
+/* Color examples */
+.fas.fa-home {
+  color: #3498db;
+}
+.fas.fa-envelope {
+  color: #e74c3c;
+}
+.fas.fa-phone {
+  color: #27ae60;
+}
+
+/* Brand colors */
+.fab.fa-facebook {
+  color: #3b5998;
+}
+.fab.fa-twitter {
+  color: #00acee;
+}
+.fab.fa-instagram {
+  color: #e1306c;
+}
+
+/* Animated spinner */
+.fas.fa-spinner {
+  color: #f39c12;
+}

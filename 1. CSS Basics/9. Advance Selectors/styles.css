@@ -1,57 +1,76 @@
-/* Everything Selector  */
-* {
-  margin: 20px;
-  color: teal;
+/* Element selector */
+p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-/* Tag Selector  */
-h1 {
-  background: red;
+/* Class selector */
+.basic {
+  color: #e74c3c;
+  font-weight: bold;
 }
 
-/* Class Selector  */
-.cls {
-  font-family: sans-serif;
-  color: teal;
+/* ID selector */
+#unique {
+  color: #2980b9;
+  font-size: 18px;
 }
 
-.otherClass {
-  background: purple;
+/* Grouping selector */
+.group1,
+.group2 {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* ID Selector  */
-#id {
+/* Descendant selector */
+.parent p.child {
+  color: purple;
+  font-style: italic;
+}
+
+/* Child selector */
+.parent2 > p.child2 {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Adjacent sibling selector */
+h3 + p.adjacent {
+  color: green;
+  font-size: 16px;
+}
+
+/* General sibling selector */
+h3 ~ p.general1,
+h3 ~ p.general2 {
   color: brown;
+  font-style: italic;
 }
 
-/* Multiple Selector  */
-h1,
-h2,
-h3 {
-  font-size: 2rem;
+/* Attribute selector */
+a[href] {
+  color: #8e44ad;
+  text-decoration: none;
+}
+a[href]:hover {
+  text-decoration: underline;
 }
 
-/* Nested Selector  */
-/* div p */
-/* All p tags beneath a div */
-div p {
-  color: crimson;
+/* Pseudo-classes */
+ul li:first-child {
+  color: red;
+}
+ul li:last-child {
+  color: blue;
 }
 
-/* div > p */
-/* All p tags immediately beneath a div */
-div > p {
-  color: black;
+/* Pseudo-elements */
+p.pseudo::before {
+  content: "🔥 ";
 }
-
-/* div ~ p */
-/* All p that are sibling following a div */
-div ~ p {
-  font-size: 2em;
-}
-
-/* div + p */
-/* All p tags that are an immediate sibiling following a div */
-div + p {
-  color: aqua;
+p.pseudo::after {
+  content: " 🔥";
 }

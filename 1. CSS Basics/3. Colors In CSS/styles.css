@@ -1,25 +1,39 @@
-/* COLOR NAMES */
-h1 {
-  color: blue;
+/* Named colors */
+.named-color {
+  color: red; /* text color */
+  background-color: yellow; /* background color */
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* RGB */
-h2 {
-  color: rgb(40, 30, 55);
+/* HEX colors */
+.hex-color {
+  color: #ffffff;
+  background-color: #3498db;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* RGBA */
-h3 {
-  color: rgba(0, 100, 30, 0.2);
+/* RGB colors */
+.rgb-color {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 165, 0);
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* HEX */
-
-h4 {
-  color: #00c4ff;
+/* RGBA colors */
+.rgba-color {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(128, 0, 128, 0.7); /* semi-transparent */
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* COLORS RESOURCES */
-/* https://galactic.ink/sphere/ */
-/* https://color.adobe.com/create/color-wheel */
-/* Color Picker for Chrome Extensions*/
+/* HSL colors */
+.hsl-color {
+  color: hsl(0, 100%, 50%);
+  background-color: hsl(120, 60%, 70%);
+  padding: 10px;
+  margin: 10px 0;
+}

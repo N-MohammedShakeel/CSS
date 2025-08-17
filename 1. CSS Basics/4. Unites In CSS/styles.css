@@ -1,46 +1,59 @@
-/* 1. Pixels (px) */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Pixels */
 .px {
-  height: 200px;
-  width: 200px;
-  background-color: cyan;
-  border-radius: 100px;
+  font-size: 20px;
+  color: white;
+  background-color: #3498db;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* 2. Percent Unit (%) */
-.parent {
-  width: 500px;
-  height: 500px;
-  background-color: cyan;
-}
-
-.child {
-  width: 100px;
-  height: 100px;
-  background: darkblue;
-}
-
-/* 3. em */
+/* em (relative to parent font-size) */
 .em {
-  font-size: 1em;
+  font-size: 2em; /* 2 times parent font size */
+  color: white;
+  background-color: #e74c3c;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* 4. rem */
-html {
-  font-size: 3rem;
-}
-
-/* div {
-  font-size: 4rem;
-} */
-
+/* rem (relative to root font-size) */
 .rem {
-  font-size: 2rem;
+  font-size: 1.5rem; /* 1.5 times root font size */
+  color: white;
+  background-color: #2ecc71;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-/* 5. vh */
-/* 6. vw */
-div {
-  background: crimson;
-  height: 50vh;
-  width: 100vw;
+/* Percentage (%) */
+.percent {
+  width: 50%; /* 50% of parent width */
+  background-color: #f39c12;
+  color: black;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Viewport height (vh) */
+.vh {
+  height: 10vh; /* 10% of viewport height */
+  background-color: #9b59b6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+/* Viewport width (vw) */
+.vw {
+  width: 50vw; /* 50% of viewport width */
+  background-color: #1abc9c;
+  color: black;
+  padding: 10px;
+  margin: 10px 0;
 }

@@ -20,11 +20,13 @@ html {
 }
 .two {
   background-color: darkmagenta;
-  left: 50%;
+  position: absolute;
 }
 .three {
   background-color: darksalmon;
+  position: fixed;
 }
 .four {
   background-color: deeppink;
+  position: sticky;
 }

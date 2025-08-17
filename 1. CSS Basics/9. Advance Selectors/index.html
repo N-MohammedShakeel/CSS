@@ -2,34 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advance Selectors</title>
+    <title>CSS Selectors Example</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Everything Selector -->
-    <!-- Tag Selector -->
-    <h1>Tag</h1>
-    <!-- Class Selector -->
-    <h2 class="cls otherClass">I'm Class Selector</h2>
-    <!-- ID Selector -->
-    <h3 id="id">I'm ID Selector</h3>
-    <!-- Multiple Selector -->
-    <div>
-      <p>
-        immediately beneath a div Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Possimus neque consequatur repellat voluptatibus eos!
-        Asperiores assumenda officiis eligendi excepturi aut.
-      </p>
+    <h2>CSS Selectors & Advanced Selectors</h2>
+
+    <!-- Basic selectors -->
+    <p class="basic">This is a class selector (.basic)</p>
+    <p id="unique">This is an ID selector (#unique)</p>
+    <p>This is an element selector (p)</p>
+
+    <!-- Grouping selectors -->
+    <div class="group1">Group Selector 1</div>
+    <div class="group2">Group Selector 2</div>
+
+    <!-- Descendant selector -->
+    <div class="parent">
+      Parent Div
+      <p class="child">Child Paragraph (descendant)</p>
     </div>
-    <!-- Nested Selector -->
-    <div>
-      <p>Hi mama , immediately beneath a div</p>
-      <ul>
-        <p>I'm p tag</p>
-      </ul>
+
+    <!-- Child selector -->
+    <div class="parent2">
+      Parent2 Div
+      <p class="child2">Child Paragraph (direct child)</p>
     </div>
-    <p>sibling</p>
+
+    <!-- Adjacent sibling selector -->
+    <h3>Heading</h3>
+    <p class="adjacent">Adjacent Sibling Paragraph</p>
+
+    <!-- General sibling selector -->
+    <h3>Another Heading</h3>
+    <p class="general1">General Sibling 1</p>
+    <p class="general2">General Sibling 2</p>
+
+    <!-- Attribute selector -->
+    <a href="https://example.com" class="link">Link with href</a>
+
+    <!-- Pseudo-classes -->
+    <ul>
+      <li class="first">First Item</li>
+      <li>Second Item</li>
+      <li class="last">Last Item</li>
+    </ul>
+
+    <!-- Pseudo-elements -->
+    <p class="pseudo">This paragraph uses pseudo-element</p>
   </body>
 </html>
