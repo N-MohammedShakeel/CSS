@@ -46,8 +46,17 @@ body {
 /* =======================
    Display: flex
    ======================= */
-.flex-container {
+.flex-container1 {
   display: flex; /* flex container */
+  background-color: #f39c12;
+  padding: 10px;
+  margin: 20px 0;
+  gap: 10px; /* spacing between flex items */
+}
+
+.flex-container2 {
+  display: flex; /* flex container */
+  flex-direction: column; /* stack items vertically */
   background-color: #f39c12;
   padding: 10px;
   margin: 20px 0;

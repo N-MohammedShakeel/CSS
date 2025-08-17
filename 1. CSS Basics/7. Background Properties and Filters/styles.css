@@ -17,7 +17,7 @@ div {
 
 /* Background color */
 .bg-color {
-  background-image: url("./assets/image.jpg");
+  background-color: aqua;
   background-size: cover;
 }
 
@@ -40,7 +40,7 @@ div {
 /* Background repeat */
 .bg-repeat {
   background-image: url("./assets/image.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: repeat; /* repeats in both directions */
   background-color: #ba3737; /* fallback */
 }
