@@ -1,18 +1,146 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GRID</title>
+    <title>Complete CSS Grid Example</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="s">header</header>
-      <main class="s">main</main>
-      <section class="s">section</section>
-      <aside class="s">aside</aside>
-      <footer class="s">footer</footer>
-    </div>
+    <h1>Complete CSS Grid Examples</h1>
+
+    <!-- 1. Basic Grid -->
+    <section class="example">
+      <h2>1. Basic Grid</h2>
+      <div class="grid-basic">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+    </section>
+
+    <!-- 2. Grid with Fractions -->
+    <section class="example">
+      <h2>2. Using fr unit</h2>
+      <div class="grid-fr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </section>
+
+    <!-- 3. Minmax -->
+    <section class="example">
+      <h2>3. Minmax()</h2>
+      <div class="grid-minmax">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+    </section>
+
+    <!-- 4. Auto-fit / Auto-fill -->
+    <section class="example">
+      <h2>4. Auto-fit vs Auto-fill</h2>
+      <div class="grid-auto">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+    </section>
+
+    <!-- 5. Grid Template Areas -->
+    <section class="example">
+      <h2>5. Grid Template Areas</h2>
+      <div class="grid-areas">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+      </div>
+    </section>
+
+    <!-- 6. Justify & Align Items -->
+    <section class="example">
+      <h2>6. Justify & Align Items</h2>
+      <div class="grid-align">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </div>
+    </section>
+
+    <!-- 7. Place Items / Place Content -->
+    <section class="example">
+      <h2>7. Place Items & Place Content</h2>
+      <div class="grid-place">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+    </section>
+
+    <!-- 8. Grid Item Control -->
+    <section class="example">
+      <h2>8. Grid Row / Column Span</h2>
+      <div class="grid-span">
+        <div class="item1">1 (span)</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+    </section>
+
+    <!-- 9. Justify-self & Align-self -->
+    <section class="example">
+      <h2>9. Justify-self & Align-self</h2>
+      <div class="grid-self">
+        <div class="self1">Self 1</div>
+        <div class="self2">Self 2</div>
+        <div class="self3">Self 3</div>
+      </div>
+    </section>
+
+    <!-- 10. Auto Rows & Auto Columns -->
+    <section class="example">
+      <h2>10. Auto Rows & Auto Columns</h2>
+      <div class="grid-auto-flow">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+        <div>Box 5</div>
+      </div>
+    </section>
+
+    <!-- 11. Order -->
+    <section class="example">
+      <h2>11. Grid Order</h2>
+      <div class="grid-order">
+        <div class="order3">1 (order 3)</div>
+        <div class="order1">2 (order 1)</div>
+        <div class="order2">3 (order 2)</div>
+      </div>
+    </section>
+
+    <!-- 12. Nested Grid -->
+    <section class="example">
+      <h2>12. Nested Grid</h2>
+      <div class="grid-nested">
+        <div>Outer 1</div>
+        <div class="inner-grid">
+          <div>Inner A</div>
+          <div>Inner B</div>
+        </div>
+        <div>Outer 3</div>
+      </div>
+    </section>
   </body>
 </html>

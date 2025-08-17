@@ -1,68 +1,183 @@
-* {
-  margin: 0;
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.example {
+  margin-bottom: 50px;
+}
+.example h2 {
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
-.container {
-  background: rgb(34, 34, 34);
+/* Base grid styling */
+.example div > div,
+.grid-areas > * {
+  background: #3498db;
+  color: white;
   padding: 20px;
-  /* height: 100vh; */
-  display: grid;
-  grid-template-columns: repeat(5, 100px);
-  grid-template-rows: repeat(2, 100px);
-  /* grid-template: repeat(4, 100px) / repeat(4, 100px); */
-  /* grid-row-gap: 20px;
-  grid-column-gap: 10px; */
-  grid-gap: 10px;
-
-  /* first layout */
-  /* grid-template-areas:
-    "h h h h h"
-    "m m m m m"
-    "m m m m m"
-    "s s . a a "
-    "f f f f f"; */
-
-  /* Second Layout */
-  /* grid-template-areas:
-    "h h h h"
-    "s s m m"
-    "a a m m"
-    "f f f f"; */
-
-  /* Third Layout */
-  grid-template-areas:
-    "h h h h"
-    "m m s s"
-    "m m a a"
-    "f f f f";
-}
-
-header {
-  grid-area: h;
-}
-
-nav {
-  grid-area: nav;
-}
-
-main {
-  grid-area: m;
-}
-
-section {
-  grid-area: s;
-}
-aside {
-  grid-area: a;
-}
-
-footer {
-  grid-area: f;
-}
-
-.s {
-  padding: 20px;
-  background: rgb(84, 84, 84);
+  border: 1px solid white;
   text-align: center;
-  color: #fff;
+  font-weight: bold;
+}
+
+/* 1. Basic Grid */
+.grid-basic {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  gap: 10px;
+}
+
+/* 2. Using fr unit */
+.grid-fr {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* middle column is double */
+  gap: 10px;
+}
+
+/* 3. Minmax */
+.grid-minmax {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  gap: 10px;
+}
+
+/* 4. Auto-fit / Auto-fill */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+/* 5. Grid Template Areas */
+.grid-areas {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "nav aside"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+.grid-areas header {
+  grid-area: header;
+  background: #e67e22;
+}
+.grid-areas nav {
+  grid-area: nav;
+  background: #16a085;
+}
+.grid-areas main {
+  grid-area: main;
+  background: #2980b9;
+}
+.grid-areas aside {
+  grid-area: aside;
+  background: #8e44ad;
+}
+.grid-areas footer {
+  grid-area: footer;
+  background: #2c3e50;
+}
+
+/* 6. Justify & Align Items */
+.grid-align {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  grid-template-rows: repeat(2, 120px);
+  justify-items: center; /* horizontal alignment */
+  align-items: center; /* vertical alignment */
+  gap: 10px;
+}
+
+/* 7. Place Items & Place Content */
+.grid-place {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  height: 300px;
+  place-items: center; /* shorthand for align-items + justify-items */
+  place-content: space-around; /* shorthand for align-content + justify-content */
+  gap: 10px;
+}
+
+/* 8. Grid Row / Column Span */
+.grid-span {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+.grid-span .item1 {
+  grid-column: span 2; /* takes 2 columns */
+  grid-row: span 2; /* takes 2 rows */
+  background: #c0392b;
+}
+
+/* 9. Justify-self & Align-self */
+.grid-self {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: 120px;
+  background: #f4f4f4;
+}
+.self1 {
+  justify-self: start;
+  align-self: start;
+  background: #9b59b6;
+}
+.self2 {
+  justify-self: center;
+  align-self: center;
+  background: #27ae60;
+}
+.self3 {
+  justify-self: end;
+  align-self: end;
+  background: #e74c3c;
+}
+
+/* 10. Auto Rows & Auto Columns */
+.grid-auto-flow {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-auto-rows: 80px;
+  grid-auto-columns: 120px;
+  gap: 10px;
+}
+
+/* 11. Order */
+.grid-order {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+.order1 {
+  order: 1;
+  background: #1abc9c;
+}
+.order2 {
+  order: 2;
+  background: #e67e22;
+}
+.order3 {
+  order: 3;
+  background: #3498db;
+}
+
+/* 12. Nested Grid */
+.grid-nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.inner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #2ecc71;
+}
+.inner-grid div {
+  background: #16a085;
+  padding: 10px;
 }

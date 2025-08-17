@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  margin-top: 50px;
+  color: #2c3e50;
+}
+
+/* Common styles for flex containers */
+.flex-container {
+  display: flex; /* enables flexbox */
+  background-color: #ecf0f1;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #bdc3c7;
+}
+
+/* Flex items */
+.flex-item {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  min-width: 50px;
+}
+
+/* =======================
+           FLEX DIRECTION
+        ======================= */
+.flex-row {
+  flex-direction: row; /* default: horizontal left to right */
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse; /* horizontal right to left */
+}
+
+.flex-column {
+  flex-direction: column; /* vertical top to bottom */
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse; /* vertical bottom to top */
+}
+
+/* =======================
+           FLEX WRAP
+        ======================= */
+.flex-wrap {
+  flex-wrap: wrap; /* items wrap to next line */
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap; /* items stay in one line (default) */
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse; /* items wrap in reverse order */
+}
+
+/* =======================
+           FLEX FLOW (shorthand)
+        ======================= */
+.flex-flow-example {
+  flex-flow: row wrap; /* combines flex-direction and flex-wrap */
+}
+
+/* =======================
+           JUSTIFY CONTENT
+        ======================= */
+.justify-start {
+  justify-content: flex-start; /* items start from left */
+}
+.justify-end {
+  justify-content: flex-end; /* items end at right */
+}
+.justify-center {
+  justify-content: center; /* items centered horizontally */
+}
+.justify-space-between {
+  justify-content: space-between; /* space between items */
+}
+.justify-space-around {
+  justify-content: space-around; /* equal space around items */
+}
+.justify-space-evenly {
+  justify-content: space-evenly; /* equal spacing between & edges */
+}
+
+/* =======================
+           ALIGN ITEMS (cross-axis alignment)
+        ======================= */
+.align-items-start {
+  align-items: flex-start; /* top of container */
+}
+.align-items-end {
+  align-items: flex-end; /* bottom of container */
+}
+.align-items-center {
+  align-items: center; /* vertically centered */
+}
+.align-items-stretch {
+  align-items: stretch; /* stretch to fill container height */
+}
+.align-items-baseline {
+  align-items: baseline; /* align text baseline */
+}
+
+/* =======================
+           ALIGN CONTENT (multi-line flex container)
+        ======================= */
+.align-content-flex-start {
+  flex-wrap: wrap;
+  align-content: flex-start; /* lines at top */
+  height: 200px;
+}
+.align-content-flex-end {
+  flex-wrap: wrap;
+  align-content: flex-end; /* lines at bottom */
+  height: 200px;
+}
+.align-content-center {
+  flex-wrap: wrap;
+  align-content: center; /* lines centered */
+  height: 200px;
+}
+.align-content-space-between {
+  flex-wrap: wrap;
+  align-content: space-between; /* space between lines */
+  height: 200px;
+}
+.align-content-space-around {
+  flex-wrap: wrap;
+  align-content: space-around; /* equal space around lines */
+  height: 200px;
+}
+
+/* =======================
+           ORDER (change order of items)
+        ======================= */
+.order-example .flex-item:nth-child(1) {
+  order: 3;
+}
+.order-example .flex-item:nth-child(2) {
+  order: 1;
+}
+.order-example .flex-item:nth-child(3) {
+  order: 2;
+}
+
+/* =======================
+           ALIGN SELF (override align-items per item)
+        ======================= */
+.align-self-example .flex-item:nth-child(1) {
+  align-self: flex-start;
+}
+.align-self-example .flex-item:nth-child(2) {
+  align-self: flex-end;
+}
+.align-self-example .flex-item:nth-child(3) {
+  align-self: center;
+}
+
+/* =======================
+           FLEX GROW, SHRINK, BASIS
+        ======================= */
+.flex-grow-example .flex-item:nth-child(1) {
+  flex-grow: 1;
+} /* expands more */
+.flex-grow-example .flex-item:nth-child(2) {
+  flex-grow: 2;
+} /* expands double */
+.flex-grow-example .flex-item:nth-child(3) {
+  flex-grow: 1;
+}
+
+.flex-shrink-example .flex-item:nth-child(1) {
+  flex-shrink: 1;
+}
+.flex-shrink-example .flex-item:nth-child(2) {
+  flex-shrink: 2;
+} /* shrinks faster */
+.flex-shrink-example .flex-item:nth-child(3) {
+  flex-shrink: 1;
+}
+
+.flex-basis-example .flex-item:nth-child(1) {
+  flex-basis: 100px;
+}
+.flex-basis-example .flex-item:nth-child(2) {
+  flex-basis: 150px;
+}
+.flex-basis-example .flex-item:nth-child(3) {
+  flex-basis: 200px;
+}
+
+/* Optional: gap between items */
+.flex-container {
+  gap: 10px;
+}

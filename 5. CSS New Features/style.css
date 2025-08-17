@@ -1,0 +1,172 @@
+/* ===============================
+       1. CSS Variables (Custom Properties)
+       =============================== */
+:root {
+  --main-color: #3498db;
+  --secondary-color: #2ecc71;
+  --padding: 20px;
+}
+
+.variables {
+  background-color: var(--main-color);
+  color: white;
+  padding: var(--padding);
+  margin: 10px 0;
+}
+
+/* ===============================
+       2. calc() Function
+       =============================== */
+.calc-box {
+  width: calc(100% - 100px); /* Full width minus 100px */
+  background: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* ===============================
+       3. mix-blend-mode
+       =============================== */
+.blend-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: url("https://picsum.photos/id/1015/300/200") no-repeat
+    center/cover;
+  margin: 20px 0;
+}
+.blend-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: red;
+  mix-blend-mode: screen; /* Blends text with background */
+}
+
+/* ===============================
+       4. :is() and :not() Selectors
+       =============================== */
+.is-not-demo p:is(.highlight, .special) {
+  color: #e74c3c; /* Applies to .highlight OR .special */
+}
+.is-not-demo p:not(.highlight) {
+  text-decoration: underline; /* Applies to all except .highlight */
+}
+
+/* ===============================
+       5. clamp() Function
+       (sets min, preferred, max values)
+       =============================== */
+.clamp-text {
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  /* min 1rem, preferred 2.5vw, max 3rem */
+  background: #f39c12;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* ===============================
+       6. aspect-ratio
+       =============================== */
+.aspect-box {
+  background: #8e44ad;
+  aspect-ratio: 16 / 9;
+  width: 60%;
+  margin: 10px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+       7. object-fit
+       =============================== */
+.object-fit-container {
+  width: 300px;
+  height: 200px;
+  border: 3px solid #333;
+  margin: 10px 0;
+}
+.object-fit-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover, contain, fill, none, scale-down */
+}
+
+/* ===============================
+       8. backdrop-filter
+       =============================== */
+.backdrop-container {
+  background: url("https://picsum.photos/id/1025/600/300") no-repeat
+    center/cover;
+  height: 200px;
+  position: relative;
+  margin: 20px 0;
+}
+.backdrop-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  backdrop-filter: blur(5px) brightness(1.2);
+}
+
+/* ===============================
+       9. nth-child / nth-of-type (Advanced)
+       =============================== */
+.nth-demo p:nth-child(odd) {
+  background: #ecf0f1;
+}
+.nth-demo p:nth-child(even) {
+  background: #bdc3c7;
+}
+
+/* ===============================
+       10. scroll-behavior
+       =============================== */
+html {
+  scroll-behavior: smooth; /* Smooth scroll */
+}
+.scroll-link {
+  display: inline-block;
+  margin: 10px;
+  color: blue;
+  cursor: pointer;
+}
+.big-section {
+  height: 500px;
+  padding: 20px;
+}
+
+/* ===============================
+       11. CSS Shapes (clip-path)
+       =============================== */
+.clip-shape {
+  width: 200px;
+  height: 200px;
+  background: #27ae60;
+  clip-path: circle(50% at 50% 50%);
+  margin: 10px 0;
+}
+
+/* ===============================
+       12. CSS Grid minmax + auto-fit
+       =============================== */
+.grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+.grid-modern div {
+  background: #2980b9;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

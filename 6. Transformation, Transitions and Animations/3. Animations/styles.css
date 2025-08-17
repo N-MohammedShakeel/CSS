@@ -1,39 +1,236 @@
-/* animation-name */
-/* animation-duration */
-/* animation-delay */
-/*  animation-iteration-count */
-/* animation-timing-function */
+/* 
+    ==============================
+    📌 What is @keyframes?
+    - @keyframes is used to define an animation in CSS. 
+    - It specifies how the element should look at certain times (0%, 50%, 100% …).
+
+    📌 How to use?
+    1. Define an animation with @keyframes.
+    2. Apply it to an element using:
+       - animation-name
+       - animation-duration
+       - animation-iteration-count (number of times or infinite)
+       - animation-direction (normal, reverse, alternate)
+       - animation-delay
+       - animation-timing-function (ease, linear, cubic-bezier)
+
+    📌 Efficient Use
+    - Use short animations to improve UX (buttons, hover states).
+    - Avoid very heavy animations on too many elements (performance issue).
+    - Combine with transforms (translate, scale, rotate) for GPU acceleration (smoother).
+    ==============================
+    */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
 
 .container {
-  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.container > div {
-  width: 300px;
-  height: 300px;
-  background-color: darkblue;
-  animation-name: InAndOut;
-  animation-duration: 4s;
-  animation-delay: 3s;
-  /* animation-iteration-count: 2; */
-  /* animation-timing-function: ease-out; */
+/* 1. Simple Bounce */
+.bounce {
+  background: #3498db;
+  animation: bounce 2s infinite;
 }
-
-@keyframes InAndOut {
-  0% {
-    transform: scale(2);
-  }
-  25% {
-    transform: scale(0.2);
-    background-color: teal;
-    transform: skew(10deg);
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
-    background-color: blue;
-    transform: skew(40deg);
-    border-radius: 50%;
+    transform: translateY(-40px);
+  }
+}
+
+/* 2. Color Changing */
+.colorchange {
+  background: #e74c3c;
+  animation: colorchange 3s infinite alternate;
+}
+@keyframes colorchange {
+  0% {
+    background: #e74c3c;
+  }
+  50% {
+    background: #2ecc71;
+  }
+  100% {
+    background: #9b59b6;
+  }
+}
+
+/* 3. Rotation */
+.rotate {
+  background: #f39c12;
+  animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 4. Pulse Effect */
+.pulse {
+  background: #1abc9c;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* 5. Fade In and Out */
+.fade {
+  background: #8e44ad;
+  animation: fade 3s infinite;
+}
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* 6. Slide Left-Right */
+.slide {
+  background: #d35400;
+  animation: slide 2s infinite alternate ease-in-out;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+/* 7. Wobble */
+.wobble {
+  background: #16a085;
+  animation: wobble 1.2s infinite;
+}
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 8. Typing Effect (using steps timing) */
+.typing {
+  font-size: 18px;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation: typing 4s steps(20, end) infinite alternate;
+  background: none;
+  color: black;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 180px;
+  }
+}
+
+/* 9. Background Gradient Animation */
+.gradient {
+  width: 200px;
+  height: 120px;
+  border-radius: 12px;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #2ec0f9);
+  background-size: 600% 600%;
+  animation: gradientmove 6s ease infinite;
+}
+@keyframes gradientmove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 10. Loading Dots Animation */
+.loading {
+  font-size: 24px;
+  color: #2c3e50;
+  display: flex;
+  gap: 4px;
+}
+.loading span {
+  animation: blink 1.4s infinite both;
+}
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
   }
 }
