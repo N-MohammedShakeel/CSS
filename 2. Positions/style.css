@@ -1,32 +1,79 @@
-*,
-html {
-  margin: 0;
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
-.container {
-  height: 500px;
-  background: rgb(46, 170, 155);
-  position: relative;
+/* =======================
+   Static (default)
+   ======================= */
+.static {
+  position: static; /* default, normal flow */
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
 }
 
-.container > div {
-  width: 100px;
-  height: 100px;
+/* =======================
+   Relative
+   ======================= */
+.relative {
+  position: relative; /* relative to its normal position */
+  top: 20px; /* moves down 20px from original position */
+  left: 30px; /* moves right 30px from original position */
+  background-color: #e74c3c;
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
 }
 
-.one {
-  background-color: darkgreen;
-  position: relative;
+/* =======================
+   Absolute
+   ======================= */
+.absolute-container {
+  position: relative; /* parent must be relative for absolute child */
+  height: 150px;
+  background-color: #f1c40f;
+  margin: 10px 0;
 }
-.two {
-  background-color: darkmagenta;
-  position: absolute;
+
+.absolute {
+  position: absolute; /* positioned relative to nearest positioned parent */
+  top: 20px;
+  right: 20px;
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px;
 }
-.three {
-  background-color: darksalmon;
-  position: fixed;
+
+/* =======================
+   Fixed
+   ======================= */
+.fixed {
+  position: fixed; /* stays fixed in viewport */
+  bottom: 10px;
+  right: 10px;
+  background-color: #9b59b6;
+  color: white;
+  padding: 10px;
 }
-.four {
-  background-color: deeppink;
-  position: sticky;
+
+/* =======================
+   Sticky
+   ======================= */
+.sticky-container {
+  margin: 20px 0;
+  height: 300px;
+  overflow: auto;
+  border: 2px dashed #7f8c8d;
+  padding: 10px;
+}
+
+.sticky {
+  position: sticky; /* sticks to top when scrolling */
+  top: 0; /* sticks when top reaches 0 */
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
 }
