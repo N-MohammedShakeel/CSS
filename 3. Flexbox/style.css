@@ -171,10 +171,10 @@ h2 {
   flex-grow: 1;
 } /* expands more */
 .flex-grow-example .flex-item:nth-child(2) {
-  flex-grow: 2;
+  flex-grow: 3;
 } /* expands double */
 .flex-grow-example .flex-item:nth-child(3) {
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 .flex-shrink-example .flex-item:nth-child(1) {

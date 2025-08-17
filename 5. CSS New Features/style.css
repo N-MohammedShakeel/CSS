@@ -114,17 +114,17 @@
   left: 10px;
   background: rgba(255, 255, 255, 0.3);
   padding: 10px;
-  backdrop-filter: blur(5px) brightness(1.2);
+  backdrop-filter: blur(4px) brightness(1.2);
 }
 
 /* ===============================
        9. nth-child / nth-of-type (Advanced)
        =============================== */
 .nth-demo p:nth-child(odd) {
-  background: #ecf0f1;
+  background: #90d9ec;
 }
 .nth-demo p:nth-child(even) {
-  background: #bdc3c7;
+  background: #ff988f;
 }
 
 /* ===============================

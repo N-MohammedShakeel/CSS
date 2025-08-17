@@ -61,7 +61,7 @@ h2 {
 @keyframes bounce {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
   50% {
     transform: translateY(-40px);
@@ -173,7 +173,7 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid black;
-  animation: typing 4s steps(20, end) infinite alternate;
+  animation: typing 4s steps(25, end) infinite alternate;
   background: none;
   color: black;
 }
